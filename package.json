@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/stats-base-ndarray-nanmax-by",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Compute the maximum value of a one-dimensional ndarray via a callback function, ignoring NaN values.",
   "license": "Apache-2.0",
   "author": {
@@ -88,7 +88,6 @@
     "extent",
     "ndarray"
   ],
-  "__stdlib__": {},
   "funding": {
     "type": "opencollective",
     "url": "https://opencollective.com/stdlib"

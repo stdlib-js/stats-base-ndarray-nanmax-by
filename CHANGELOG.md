@@ -2,9 +2,9 @@
 
 > Package changelog.
 
-<section class="release" id="unreleased">
+<section class="release" id="v0.1.0">
 
-## Unreleased (2025-12-02)
+## 0.1.0 (2026-01-31)
 
 <section class="features">
 
@@ -22,6 +22,7 @@
 
 <details>
 
+-   [`2035f34`](https://github.com/stdlib-js/stdlib/commit/2035f344a1a469278042b7532f034dc6119933b3) - **docs:** add function documentation _(by Athan Reines)_
 -   [`68037ff`](https://github.com/stdlib-js/stdlib/commit/68037ff81a55246ec097a7e0b4541d93c6209e7a) - **feat:** add `stats/base/ndarray/nanmax-by` [(#8640)](https://github.com/stdlib-js/stdlib/pull/8640) _(by Divyanshu, Athan Reines)_
 
 </details>
