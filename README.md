@@ -48,7 +48,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import nanmaxBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-ndarray-nanmax-by@deno/mod.js';
+import nanmaxBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-ndarray-nanmax-by@v0.1.1-deno/mod.js';
 ```
 
 #### nanmaxBy( arrays, clbk\[, thisArg ] )
@@ -133,7 +133,7 @@ import bernoulli from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-bernoul
 import filledarrayBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-filled-by@deno/mod.js';
 import ndarray from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-ctor@deno/mod.js';
 import ndarray2array from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-to-array@deno/mod.js';
-import nanmaxBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-ndarray-nanmax-by@deno/mod.js';
+import nanmaxBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-ndarray-nanmax-by@v0.1.1-deno/mod.js';
 
 function clbk( value ) {
     return value * 2.0;
