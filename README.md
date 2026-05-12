@@ -74,14 +74,13 @@ var nanmaxBy = require( '@stdlib/stats-base-ndarray-nanmax-by' );
 Computes the maximum value of a one-dimensional ndarray via a callback function, ignoring `NaN` values.
 
 ```javascript
-var ndarray = require( '@stdlib/ndarray-base-ctor' );
+var vector = require( '@stdlib/ndarray-vector-ctor' );
 
 function clbk( value ) {
     return value * 2.0;
 }
 
-var xbuf = [ 1.0, NaN, 4.0, 2.0 ];
-var x = new ndarray( 'generic', xbuf, [ 4 ], [ 1 ], 0, 'row-major' );
+var x = vector( [ 1.0, NaN, 4.0, 2.0 ], 'generic' );
 
 var v = nanmaxBy( [ x ], clbk );
 // returns 8.0
@@ -102,15 +101,14 @@ The invoked callback is provided three arguments:
 To set the callback execution context, provide a `thisArg`.
 
 ```javascript
-var ndarray = require( '@stdlib/ndarray-base-ctor' );
+var vector = require( '@stdlib/ndarray-vector-ctor' );
 
 function clbk( value ) {
     this.count += 1;
     return value * 2.0;
 }
 
-var xbuf = [ 1.0, 3.0, NaN, 2.0 ];
-var x = new ndarray( 'generic', xbuf, [ 4 ], [ 1 ], 0, 'row-major' );
+var x = vector( [ 1.0, 3.0, NaN, 2.0 ], 'generic' );
 var ctx = {
     'count': 0
 };
@@ -148,8 +146,8 @@ var count = ctx.count;
 ```javascript
 var uniform = require( '@stdlib/random-base-uniform' );
 var bernoulli = require( '@stdlib/random-base-bernoulli' );
-var filledarrayBy = require( '@stdlib/array-filled-by' );
-var ndarray = require( '@stdlib/ndarray-base-ctor' );
+var fillBy = require( '@stdlib/ndarray-fill-by' );
+var zeros = require( '@stdlib/ndarray-zeros' );
 var ndarray2array = require( '@stdlib/ndarray-to-array' );
 var nanmaxBy = require( '@stdlib/stats-base-ndarray-nanmax-by' );
 
@@ -164,8 +162,11 @@ function rand() {
     return uniform( -50.0, 50.0 );
 }
 
-var xbuf = filledarrayBy( 10, 'generic', rand );
-var x = new ndarray( 'generic', xbuf, [ xbuf.length ], [ 1 ], 0, 'row-major' );
+var opts = {
+    'dtype': 'generic'
+};
+
+var x = fillBy( zeros( [ 10 ], opts ), rand );
 console.log( ndarray2array( x ) );
 
 var v = nanmaxBy( [ x ], clbk );
